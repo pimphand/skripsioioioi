@@ -4,6 +4,7 @@ namespace App\Model;
 
 use App\User;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use phpseclib\Math\BigInteger;
 
 /**
@@ -32,6 +33,8 @@ class Doctor extends Model
    *
    * @var array
    */
+
+
   protected $fillable = [
     'str',
     'title',

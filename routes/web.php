@@ -38,11 +38,12 @@ Route::middleware(['activeUser'])->group(function () {
   Route::group(['prefix' => 'doctor', 'as' => 'doctor.'], function () {
     Route::get('/', 'DoctorController@index')->name('index')->middleware('auth', 'role:0|1');
     Route::get('/create', 'DoctorController@create')->name('create')->middleware('auth', 'role:0');
-    Route::post('/store', 'DoctorController@store')->name('store');
+    Route::post('/store', 'DoctorController@store')->name('store')->middleware('auth', 'role:0');
     Route::post('/show', 'DoctorController@show')->name('show');
     Route::get('/edit/{id}', 'DoctorController@edit')->name('edit')->middleware('auth', 'role:0|1');
     Route::post('/update/{id}', 'DoctorController@update')->name('update');
-    Route::get('/delete', 'DoctorController@delete')->name('delete')->middleware('auth', 'role:0|1');
+    Route::get('/delete/{id}', 'DoctorController@destroy')->name('delete')->middleware('auth', 'role:0|1');
+    Route::post('/image/update/{id}', 'DoctorController@updateImage')->name('updateImage')->middleware('auth');
   });
 
   Route::group(['prefix' => 'user', 'as' => 'user.'], function () {

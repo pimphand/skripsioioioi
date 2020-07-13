@@ -8,7 +8,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="description" content="Find easily a doctor and book online an appointment">
 	<meta name="author" content="Ansonika">
-	<title>FINDOCTOR - Find easily a doctor and book online an appointment</title>
+	<title>Animal Care</title>
 
 	<!-- Favicons-->
 	<link rel="shortcut icon" href="{{ asset('front/img/favicon.icon') }}" type="image/x-icon">
@@ -36,6 +36,15 @@
 </head>
 
 <body>
+	<!-- Start of LiveChat (www.livechatinc.com) code -->
+<script>
+    window.__lc = window.__lc || {};
+    window.__lc.license = 12045222;
+    ;(function(n,t,c){function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},once:function(){i(["once",c.call(arguments)])},off:function(){i(["off",c.call(arguments)])},get:function(){if(!e._h)throw new Error("[LiveChatWidget] You can't use getters before load.");return i(["get",c.call(arguments)])},call:function(){i(["call",c.call(arguments)])},init:function(){var n=t.createElement("script");n.async=!0,n.type="text/javascript",n.src="https://cdn.livechatinc.com/tracking.js",t.head.appendChild(n)}};!n.__lc.asyncInit&&e.init(),n.LiveChatWidget=n.LiveChatWidget||e}(window,document,[].slice))
+</script>
+<noscript><a href="https://www.livechatinc.com/chat-with/12045222/" rel="nofollow">Chat with us</a>, powered by <a href="https://www.livechatinc.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript>
+<!-- End of LiveChat code -->
+
 
 	<div class="layer"></div>
 	<!-- Mobile menu overlay mask -->
@@ -49,15 +58,15 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-3 col-6">
-					<div id="logo_home">
-						<h1><a href="{{ url('/') }}" title="Findoctor">Animal Care</a></h1>
+					<div id="logo_hsome">
+						<h1><a href="{{ url('/') }}" title="Animal Care">Animal Care</a></h1>
 					</div>
 				</div>
 				<nav class="col-lg-9 col-6">
 					<a class="cmn-toggle-switch cmn-toggle-switch__htx open_close" href="#0"><span>Menu mobile</span></a>
 					<ul id="top_access">
 						<li><a href="{{ route('login') }}"><i class="pe-7s-user"></i></a></li>
-						<li><a href="{{ route('register') }}"><i class="pe-7s-add-user"></i></a></li>
+						<!-- <li><a href="{{ route('register') }}"><i class="pe-7s-add-user"></i></a></li> -->
 					</ul>
 					<!-- /main-menu -->
 				</nav>
@@ -73,7 +82,7 @@
 				<div class="content">
 					<h3>Animal Care</h3>
 					<p>
-						Ridiculus sociosqu cursus neque cursus curae ante scelerisque vehicula.
+					Adalah sebuah aplikasi konsultasi kesehatan hewan berbasis website. Aplikasi ini akan memudahkan para pemilik hewan untuk konsultasi kedepada dokter hewan tanpa harus datang langsung ke klinik hewan. 
 					</p>
 					{{--  <form method="post" action="list.html">
 						<div id="custom-search-input">
@@ -166,44 +175,52 @@
 				</div>
 				<div id="reccomended" class="owl-carousel owl-theme">
 					<div class="item">
-						<a href="detail-page.html">
-							<div class="views"><i class="icon-eye-7"></i>140</div>
+						<!-- <a href="detail-page.html"> -->
+							<!-- <div class="views"><i class="icon-eye-7"></i>140</div> -->
 							<div class="title">
-								<h4>Dr. Julia Holmes<em>Pediatrician - Cardiologist</em></h4>
-							</div><img src="{{ asset('front/img/4.png') }}" alt="">
-						</a>
+								<h4>Drh. Mega Cahyo Nalasukma<em></em></h4>
+								</div><img src="{{ asset('end/back/dist/img/drhmega.jpg') }}" alt="">
+						<!-- </a> -->
 					</div>
 					<div class="item">
-						<a href="detail-page.html">
-							<div class="views"><i class="icon-eye-7"></i>120</div>
+						<!-- <a href="detail-page.html"> -->
+							<!-- <div class="views"><i class="icon-eye-7"></i>98</div> -->
 							<div class="title">
-								<h4>Dr. Julia Holmes<em>Pediatrician</em></h4>
-							</div><img src="{{ asset('front/img/2.png') }}" alt="">
-						</a>
+								<h4>Drh. Handisti Elgy Sesantyamukti<em></em></h4>
+							</div><img src="{{ asset('end/back/dist/img/drhhandisti.jpg') }}" alt="">
+						<!-- </a> -->
 					</div>
 					<div class="item">
-						<a href="detail-page.html">
-							<div class="views"><i class="icon-eye-7"></i>115</div>
+						<!-- <a href="detail-page.html"> -->
+							<!-- <div class="views"><i class="icon-eye-7"></i>120</div> -->
 							<div class="title">
-								<h4>Dr. Julia Holmes<em>Pediatrician</em></h4>
-							</div><img src="http://via.placeholder.com/350x500.jpg" alt="">
-						</a>
+								<h4>Drh. Putri Arum Wibawati<em></em></h4>
+								</div><img src="{{ asset('end/back/dist/img/drhputri.jpg') }}" alt="">
+						<!-- </a> -->
 					</div>
 					<div class="item">
-						<a href="detail-page.html">
+						<!-- <a href="detail-page.html"> -->
+							<!-- <div class="views"><i class="icon-eye-7"></i>115</div> -->
+							<div class="title">
+								<h4>Drh. Mega Cahyo Nalasukma<em></em></h4>
+							</div><img src="{{ asset('end/back/dist/img/drhmega.jpg') }}" alt="">
+						<!-- </a> -->
+					</div>
+					<div class="item">
+						<!-- <a href="detail-page.html"> -->
+							<!-- <div class="views"><i class="icon-eye-7"></i>98</div> -->
+							<div class="title">
+								<h4>Drh. Handisti Elgy Sesantyamukti<em></em></h4>
+							</div><img src="{{ asset('end/back/dist/img/drhhandisti.jpg') }}" alt="">
+						<!-- </a> -->
+					</div>
+					<div class="item">
+						<!-- <a href="detail-page.html"> -->
 							<div class="views"><i class="icon-eye-7"></i>98</div>
 							<div class="title">
-								<h4>Dr. Julia Holmes<em>Pediatrician</em></h4>
-							</div><img src="http://via.placeholder.com/350x500.jpg" alt="">
-						</a>
-					</div>
-					<div class="item">
-						<a href="detail-page.html">
-							<div class="views"><i class="icon-eye-7"></i>98</div>
-							<div class="title">
-								<h4>Dr. Julia Holmes<em>Pediatrician</em></h4>
-							</div><img src="http://via.placeholder.com/350x500.jpg" alt="">
-						</a>
+								<h4>Drh. Putri Arum Wibawati<em></em></h4>
+							</div><img src="{{ asset('end/back/dist/img/drhputri.jpg') }}" alt="">
+						<!-- </a> -->
 					</div>
 				</div>
 				<!-- /carousel -->
@@ -214,33 +231,33 @@
 		
 		<div class="container margin_120_95">
 			<div class="main_title">
-				<h2>Discover the <strong>online</strong> appointment!</h2>
-				<p>Usu habeo equidem sanctus no. Suas summo id sed, erat erant oporteat cu pri. In eum omnes molestie. Sed ad debet scaevola, ne mel.</p>
+				<h2>Tata cara pengunaaan</h2>
+				<!-- <p>Usu habeo equidem sanctus no. Suas summo id sed, erat erant oporteat cu pri. In eum omnes molestie. Sed ad debet scaevola, ne mel.</p> -->
 			</div>
 			<div class="row add_bottom_30">
-				<div class="col-lg-4">
-					<div class="box_feat" id="icon_3">
+				<!-- <div class="col-lg-4">
+					<div class="box_feat" id="icon_1">
 						<span></span>
 						<h3>Find a Doctor</h3>
 						<p>Usu habeo equidem sanctus no. Suas summo id sed, erat erant oporteat cu pri. In eum omnes molestie.</p>
 					</div>
-				</div>
-				<div class="col-lg-4">
+				</div> -->
+				<div class="col-lg-6">
 					<div class="box_feat" id="icon_2">
 						<span></span>
-						<h3>View profile</h3>
-						<p>Usu habeo equidem sanctus no. Suas summo id sed, erat erant oporteat cu pri. In eum omnes molestie.</p>
+						<h3>Kunjungi Website Animal Care</h3>
+						<!-- <p>.</p> -->
 					</div>
 				</div>
-				<div class="col-lg-4">
+				<div class="col-lg-6">
 					<div class="box_feat" id="icon_3">
-						<h3>Book a visit</h3>
-						<p>Usu habeo equidem sanctus no. Suas summo id sed, erat erant oporteat cu pri. In eum omnes molestie.</p>
+						<h3>Klik Logo Chat di bawah kanan layar</h3>
+						<!-- <p>Usu habeo equidem sanctus no. Suas summo id sed, erat erant oporteat cu pri. In eum omnes molestie.</p> -->
 					</div>
 				</div>
 			</div>
 			<!-- /row -->
-			<p class="text-center"><a href="{{route ('login')}}" class="btn_1 medium">Chat Now</a></p>
+			<!-- <p class="text-center"><a href="{{route ('login')}}" class="btn_1 medium">Chat Now</a></p> -->
 		</div>
 		<!-- /container -->
 
@@ -254,10 +271,10 @@
 				<div class="col-lg-3 col-md-12">
 					<p>
 						<a href="{{ url ('/')}}" title="Chat Now">
-							<img src="{{ asset('front/img/logo.png') }}" data-retina="true" alt="" width="163" height="36" class="img-fluid">
+							<img src="{{ asset('front/img/lgo.png') }}" data-retina="true" alt="" width="163" height="36" class="img-fluid">
 						</a>
 					</p>
-				</div>
+				<!-- </div>
 				<div class="col-lg-3 col-md-4">
 					<h5>About</h5>
 					<ul class="links">
@@ -294,9 +311,9 @@
 						</ul>
 					</div>
 				</div>
-			</div>
+			</div> -->
 			<!--/row-->
-			<hr>
+			<!-- <hr>
 			<div class="row">
 				<div class="col-md-8">
 					<ul id="additional_links">
@@ -309,10 +326,10 @@
 				</div>
 			</div>
 		</div>
-	</footer>
+	</footer> -->
 	<!--/footer-->
 
-	<div id="toTop"></div>
+	<!-- <div id="toTop"></div> -->
 	<!-- Back to top button -->
 
 	<!-- COMMON SCRIPTS -->

@@ -15,6 +15,9 @@ class DoctorController extends Controller
      */
     public function index()
     {
+
+
+
         $doctors = Doctor::all();
         $doctors->map(function ($itme) {
             $itme->user = User::find($itme->user);
@@ -23,6 +26,12 @@ class DoctorController extends Controller
             'doctors' => $doctors
         ];
         return view('doctor.index', $data);
+
+        $doctors = Doctor::where('delete', 0)->get();
+
+        $data = [
+          'doctors' => $doctors
+        ];
     }
 
     /**
@@ -49,6 +58,7 @@ class DoctorController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
+            'nama'   => 'required|string',
             'str'   => 'required|string',
             'title' => 'required|string',
             'place'   => 'required| string',
@@ -59,14 +69,20 @@ class DoctorController extends Controller
         ]);
 
         $doctor = new Doctor();
+        $doctor->nama = $request->nama;
         $doctor->str = $request->str;
         $doctor->title = $request->title;
         $doctor->place = $request->place;
         $doctor->address = $request->place;
         $doctor->graduated = $request->graduated;
+
         $doctor->save();
 
-        return redirect()->route('doctors.create')->with(['message' => 'input data berhasil']);
+
+        // $data ['img'] = $request->file('img')->store('img','public');
+
+        return redirect()->route('doctor.create')->with(['message' => 'input data berhasil']);
+
     }
 
     /**
@@ -90,7 +106,6 @@ class DoctorController extends Controller
     {
         //
     }
-
     /**
      * Update the specified resource in storage.
      *
@@ -111,6 +126,10 @@ class DoctorController extends Controller
      */
     public function destroy(Doctor $id)
     {
-        //
+        $doctors = Doctor::where($id);
+        $doctors->delete();
+    
+        return redirect()->back();
+    
     }
 }

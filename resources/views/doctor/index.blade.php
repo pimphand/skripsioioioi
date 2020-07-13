@@ -30,30 +30,31 @@
                     <th>Place</th>
                     <th>Addres</th>
                     <th>Graduated</th>
-                    <th>Action</th>
+                    <!-- <th>Action</th> -->
                   </tr>
                   </thead>
                   <tbody>
                   @foreach($doctors as $item)
                   <tr>
                     <td>{{ $loop->index + 1 }}</td>
-                    <td>{{ $item->user->name }}</td>
+                    <td>{{ $item->nama }}</td>
                     <td>{{ $item->str }}</td>
                     <td>{{ $item->title }}</td>
                     <td>{{ $item->place }}</td>
                     <td>{{ $item->address }}</td>
                     <td>{{ $item->graduated }}</td>
-                    <td>
+                    <!-- <td>
                      <a href="#" class="btn btn-info btn-sm">
                          <i class="fas fa-edit"></i>
                       </a>
-                        <form action="#" method="post" class="d-inline">
-                          {{--  @method('delete')  --}}
+                        <form action="{{ route('doctor.destroy', $item->id) }}" class="d-inline">
+                        @method('delete')
+                        @csrf
                               <button class="btn btn-danger btn-sm">
                                 <i class="fas fa-trash"></i>
                              </button>
                             </form>
-                    </td>
+                    </td> -->
                   </tr>
                    @endforeach
                 </tbody>
@@ -66,7 +67,8 @@
                     <th>Place</th>
                     <th>Addres</th>
                     <th>Graduated</th>
-                    <th>Action</th>
+                    
+                    <!-- <th>Action</th> -->
                     </tr>
                  </tfoot>
               </table>

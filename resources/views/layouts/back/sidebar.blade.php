@@ -60,7 +60,7 @@
           </a>
         </li>
           @endif
-          @if (Auth::user()->role == 3)
+ <!--@if (Auth::user()->role == 3)
         <li class="nav-item">
           <a href="{{ route('user.index') }}" class="nav-link {{ request()->is('user') ? 'active' : '' }}">
             <i class="nav-icon fas fa-user"></i>
@@ -90,7 +90,7 @@
           </a>
         </li>
          @endif
-        {{--  <li class="nav-item">
+        <li class="nav-item">
           <a href="{{ route('blog.index') }}" class="nav-link {{ request()->is('blog') ? 'active' : '' }}">
             <i class="nav-icon fas fa-info "></i>
             <p>
@@ -105,7 +105,7 @@
              Add Blog
             </p>
           </a>
-        </li>  --}}
+        </li>  
       </ul>
-    </nav>
+    </nav> -->
 </aside>
